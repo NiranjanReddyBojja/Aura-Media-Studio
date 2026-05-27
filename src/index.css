@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0B0F19;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom design additions for the Elegant Dark canvas */
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.glow-coral {
+  box-shadow: 0 0 25px -5px rgba(255, 87, 34, 0.4);
+}
+
+.glow-coral-subtle {
+  box-shadow: 0 0 15px -3px rgba(255, 87, 34, 0.2);
+}
+
+.text-gradient-coral {
+  background: linear-gradient(135deg, #FF5722 0%, #FF8A65 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-slate-glass {
+  background: rgba(26, 31, 44, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+/* Smooth custom scrollbars for cinematic layout side-by-side grids */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D3748;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5722;
+}
