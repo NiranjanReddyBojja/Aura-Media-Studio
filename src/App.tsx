@@ -1618,18 +1618,32 @@ export default function App() {
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">
-                        Render Duration
-                      </label>
-                      <select
-                        value={videoDurationSecs}
-                        onChange={(e) => setVideoDurationSecs(Number(e.target.value))}
-                        className="w-full bg-[#0B0F19] border border-[#2D3748] focus:border-[#FF5722] rounded-xl px-3 py-2 text-xs text-gray-200"
-                      >
-                        <option value={4}>4 Seconds</option>
-                        <option value={8}>8 Seconds (Optimal)</option>
-                        <option value={12}>12 Seconds (Premium)</option>
-                      </select>
+                      <div className="flex justify-between items-center mb-2">
+                        <label className="block text-xs font-bold text-gray-300 uppercase tracking-wider">
+                          Render Duration
+                        </label>
+                        <span className="text-[10px] font-bold font-mono text-[#FF5722] bg-[#FF5722]/10 border border-[#FF5722]/30 px-1.5 py-0.5 rounded">
+                          {videoDurationSecs}s
+                        </span>
+                      </div>
+                      <div className="space-y-1.5 pt-1">
+                        <input
+                          type="range"
+                          min="4"
+                          max="15"
+                          step="1"
+                          id="duration-range-slider"
+                          value={videoDurationSecs}
+                          onChange={(e) => setVideoDurationSecs(Number(e.target.value))}
+                          className="w-full accent-[#FF5722] h-1.5 bg-[#0B0F19] rounded-lg border border-[#2D3748] appearance-none cursor-pointer"
+                        />
+                        <div className="flex justify-between text-[9px] font-mono text-gray-500 px-0.5">
+                          <span>4s</span>
+                          <span>8s (Opt)</span>
+                          <span>12s</span>
+                          <span>15s (Max)</span>
+                        </div>
+                      </div>
                     </div>
 
                     <div>
